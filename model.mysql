@@ -1,0 +1,27 @@
+# Create schemas
+
+# Create tables
+CREATE TABLE IF NOT EXISTS Table1
+(
+    column1 INT NOT NULL,
+    column2 VARCHAR(0),
+    PRIMARY KEY(column1)
+);
+
+CREATE TABLE IF NOT EXISTS Table2
+(
+    column1 INT NOT NULL,
+    column2 VARCHAR(0),
+    PRIMARY KEY(column1)
+);
+
+
+# Create FKs
+ALTER TABLE Table1
+    ADD    FOREIGN KEY (column1)
+    REFERENCES Table2(column1)
+;
+    
+
+# Create Indexes
+
